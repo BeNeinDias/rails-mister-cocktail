@@ -1,0 +1,13 @@
+<div class="container">
+  <h1 clqss="text-center">Cocktails</h1>
+  <p>Here it is the list of Cocktails</p>
+
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li class= "strip-decorations"><%= link_to cocktail.name.capitalize, cocktail_path(cocktail) %></li>
+    <% end %>
+  </ul>
+  <div class="button-create">
+    <%= link_to "Create a Cocktail", new_cocktail_path(@cocktails), class: "btn btn-success" %>
+  </div>
+</div>

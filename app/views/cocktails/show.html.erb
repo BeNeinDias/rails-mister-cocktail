@@ -1,0 +1,7 @@
+<h1 class= "text-center"><%= @cocktail.name.capitalize %></h1>
+<ul>
+  <% @cocktail.doses.each do |dose| %>
+    <li><%=dose.description.capitalize %> - <%= dose.ingredient.name %></li>
+  <% end %>
+</ul>
+
